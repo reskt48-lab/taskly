@@ -1038,3 +1038,95 @@ textarea.form-input {
     color: var(--gray);
     font-size: 14px;
 }
+
+/* Install Prompt */
+.install-prompt {
+    position: fixed;
+    bottom: 80px;
+    left: 50%;
+    transform: translateX(-50%) translateY(100px);
+    max-width: 400px;
+    width: calc(100% - 40px);
+    background: white;
+    border-radius: 16px;
+    box-shadow: var(--shadow-lg);
+    padding: 20px;
+    z-index: 1001;
+    transition: transform 0.3s ease;
+}
+
+.install-prompt.show {
+    transform: translateX(-50%) translateY(0);
+}
+
+.install-content {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    position: relative;
+}
+
+.install-content i {
+    font-size: 32px;
+    color: var(--primary);
+}
+
+.install-text h3 {
+    font-size: 16px;
+    margin-bottom: 4px;
+}
+
+.install-text p {
+    font-size: 14px;
+    color: var(--gray);
+}
+
+.btn-install {
+    padding: 10px 20px;
+    background: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.btn-close-install {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: var(--light-gray);
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* PWA Mode */
+body.pwa-mode .header {
+    padding-top: 20px;
+}
+
+/* Offline indicator */
+body.offline::before {
+    content: '?? Offline Mode';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: var(--warning);
+    color: var(--dark);
+    text-align: center;
+    padding: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    z-index: 10000;
+}
+
+body.offline .app-container {
+    margin-top: 40px;
+}
+

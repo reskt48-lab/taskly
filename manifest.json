@@ -1,13 +1,47 @@
 {
-  "name": "Taskly",
+  "name": "Taskly - Catat Tugasmu",
   "short_name": "Taskly",
-  "description": "Aplikasi manajemen tugas yang mudah dan powerful",
-  "start_url": "/",
+  "description": "Aplikasi manajemen tugas yang mudah dan powerful untuk mencatat semua tugas Anda",
+  "start_url": "./index.html",
+  "scope": "./",
   "display": "standalone",
   "background_color": "#6C5CE7",
   "theme_color": "#6C5CE7",
-  "orientation": "portrait",
+  "orientation": "portrait-primary",
+  "lang": "id",
+  "dir": "ltr",
+  "categories": ["productivity", "utilities"],
   "icons": [
+    {
+      "src": "icon-72.png",
+      "sizes": "72x72",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icon-96.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icon-128.png",
+      "sizes": "128x128",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icon-144.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icon-152.png",
+      "sizes": "152x152",
+      "type": "image/png",
+      "purpose": "any"
+    },
     {
       "src": "icon-192.png",
       "sizes": "192x192",
@@ -15,10 +49,49 @@
       "purpose": "any maskable"
     },
     {
+      "src": "icon-384.png",
+      "sizes": "384x384",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
       "src": "icon-512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "screenshot1.png",
+      "sizes": "540x720",
+      "type": "image/png"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Tambah Tugas",
+      "short_name": "Tambah",
+      "description": "Tambah tugas baru",
+      "url": "./index.html?action=add",
+      "icons": [
+        {
+          "src": "icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Lihat Kalender",
+      "short_name": "Kalender",
+      "description": "Buka kalender tugas",
+      "url": "./index.html?page=calendar",
+      "icons": [
+        {
+          "src": "icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
     }
   ]
 }
