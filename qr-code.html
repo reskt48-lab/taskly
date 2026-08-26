@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taskly - QR Code</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        .container {
+            background: white;
+            color: #333;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            max-width: 500px;
+        }
+        h1 {
+            margin: 0 0 10px;
+            font-size: 32px;
+            color: #6C5CE7;
+        }
+        .subtitle {
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 16px;
+        }
+        #qrcode {
+            display: flex;
+            justify-content: center;
+            margin: 30px 0;
+            padding: 20px;
+            background: white;
+            border-radius: 12px;
+        }
+        .url {
+            background: #f5f5f5;
+            padding: 15px;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            word-break: break-all;
+            margin: 20px 0;
+            font-size: 14px;
+        }
+        .instructions {
+            text-align: left;
+            margin-top: 30px;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 12px;
+            border-left: 4px solid #6C5CE7;
+        }
+        .instructions h3 {
+            margin-top: 0;
+            color: #6C5CE7;
+        }
+        .instructions ol {
+            padding-left: 20px;
+        }
+        .instructions li {
+            margin: 10px 0;
+        }
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: #6C5CE7;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            margin: 10px 5px;
+            font-weight: 600;
+            transition: transform 0.2s;
+        }
+        .btn:hover {
+            transform: scale(1.05);
+        }
+        .btn-secondary {
+            background: #00B894;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📱 Taskly</h1>
+        <p class="subtitle">Scan QR Code untuk buka di HP</p>
+        
+        <div id="qrcode"></div>
+        
+        <div class="url">
+            https://reskt48-lab.github.io/taskly
+        </div>
+        
+        <a href="https://reskt48-lab.github.io/taskly" target="_blank" class="btn">
+            🌐 Buka Aplikasi
+        </a>
+        
+        <a href="https://github.com/reskt48-lab/taskly" target="_blank" class="btn btn-secondary">
+            📦 Repository
+        </a>
+        
+        <div class="instructions">
+            <h3>📲 Cara Install di HP:</h3>
+            <ol>
+                <li><strong>Scan QR Code</strong> dengan kamera HP</li>
+                <li>Atau ketik manual: <code>reskt48-lab.github.io/taskly</code></li>
+                <li><strong>Android:</strong> Menu ⋮ → "Add to Home screen"</li>
+                <li><strong>iPhone:</strong> Share 🔗 → "Add to Home Screen"</li>
+                <li>✅ Selesai! App muncul di home screen</li>
+            </ol>
+        </div>
+        
+        <div class="instructions" style="border-left-color: #00B894;">
+            <h3>✨ Fitur Aplikasi:</h3>
+            <ul style="list-style: none; padding: 0;">
+                <li>✓ Login & Register</li>
+                <li>✓ Dashboard & Kalender</li>
+                <li>✓ Statistik dengan Grafik</li>
+                <li>✓ 6 Kategori Tugas</li>
+                <li>✓ Offline Mode</li>
+                <li>✓ PWA Installable</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- QR Code Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script>
+        // Generate QR Code
+        const qrcode = new QRCode(document.getElementById("qrcode"), {
+            text: "https://reskt48-lab.github.io/taskly",
+            width: 256,
+            height: 256,
+            colorDark: "#6C5CE7",
+            colorLight: "#ffffff",
+            correctLevel: QRCode.CorrectLevel.H
+        });
+    </script>
+</body>
+</html>
