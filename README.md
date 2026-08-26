@@ -1,107 +1,77 @@
-# Taskly - Catat Tugasmu
+# Taskly - Aplikasi Manajemen Tugas
 
-![Taskly Logo](https://img.shields.io/badge/Taskly-v1.0.0-6C5CE7?style=for-the-badge)
-![Progressive Web App](https://img.shields.io/badge/PWA-Enabled-00D2D3?style=for-the-badge)
-![Responsive](https://img.shields.io/badge/Responsive-Yes-00B894?style=for-the-badge)
+![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)
+![Kivy](https://img.shields.io/badge/Kivy-2.3.0-green.svg)
+![Status](https://img.shields.io/badge/Status-Active-success.svg)
 
 ## 📱 Tentang Aplikasi
 
-**Taskly** adalah aplikasi manajemen tugas (task management) yang modern, responsif, dan mudah digunakan. Dirancang dengan antarmuka yang intuitif dan dapat diakses dari berbagai perangkat (desktop, tablet, dan mobile).
+**Taskly** adalah aplikasi manajemen tugas (task management) yang dibangun menggunakan **Python** dan framework **Kivy**. Aplikasi ini memiliki antarmuka yang intuitif dan mudah digunakan untuk membantu mengelola tugas harian Anda.
 
 ## ✨ Fitur Utama
 
 ### 🏠 Halaman Beranda
 - Dashboard tugas harian
-- Daftar tugas sekolah
-- Tugas mendatang
-- Quick add task dengan FAB button
+- Daftar tugas yang belum selesai
+- Quick access untuk menambah tugas
+- Checkbox untuk menandai tugas selesai
 
-### 📅 Kalender
-- Tampilan kalender bulanan
-- Indikator hari dengan tugas
-- Agenda harian
-- Navigasi antar bulan
+### ➕ Tambah Tugas
+- Form lengkap untuk membuat tugas baru
+- Input judul dan deskripsi tugas
+- Set tanggal dan waktu
+- Pilihan kategori (Target, Waktu, Belajar, Pribadi, Kerja, Olahraga)
 
 ### 📊 Statistik
-- Total tugas dan penyelesaian
-- Grafik pie kategori tugas
-- Grafik line progress mingguan
+- Total tugas dan status penyelesaian
+- Jumlah tugas selesai dan berlanjut
 - Persentase penyelesaian
+- Statistik berdasarkan kategori
 
 ### 👤 Profil
 - Informasi pengguna
-- Pengaturan aplikasi
-- Kelola kategori
-- Tema aplikasi
-- Logout
+- Menu pengaturan
+- Tentang aplikasi
+- Tombol logout
 
-### ➕ Tambah Tugas
-- Form lengkap untuk membuat tugas
-- Pilihan kategori (Target, Waktu, Belajar, Pribadi, Kerja, Olahraga)
-- Set tanggal dan waktu
-- Deskripsi tugas
+## 🚀 Cara Instalasi
 
-### 🔐 Autentikasi
-- Login dengan email/username
-- Registrasi akun baru
-- Login dengan Google (coming soon)
-- Lupa password
+### 1. Clone Repository
+```bash
+git clone <repository-url>
+cd opencode
+```
 
-### ⚙️ Pengaturan
-- Notifikasi pengingat tugas
-- Push notification
-- Ubah password
-- Backup & restore data
-- Hapus akun
+### 2. Install Dependencies
+```bash
+pip install -r requirements.txt
+```
+
+### 3. Jalankan Aplikasi
+```bash
+python main.py
+```
+
+## 📦 Dependencies
+
+- **Python 3.8+**
+- **Kivy 2.3.0** - Framework untuk membuat aplikasi multi-touch
+- **Pillow** - Library untuk pemrosesan gambar
 
 ## 🎨 Desain
 
-- **UI/UX**: Modern, clean, dan user-friendly
+- **Framework**: Kivy (Python)
 - **Warna Utama**: Purple (#6C5CE7)
-- **Tipografi**: System fonts untuk performa optimal
-- **Ikon**: Font Awesome 6
-- **Animasi**: Smooth transitions dan interactions
-
-## 🚀 Cara Menggunakan
-
-### 1. Buka Aplikasi
-Buka file `index.html` di browser modern (Chrome, Firefox, Safari, Edge)
-
-### 2. Login/Register
-- Untuk demo, Anda bisa langsung login dengan kredensial apa saja
-- Atau buat akun baru melalui halaman registrasi
-
-### 3. Tambah Tugas
-- Klik tombol FAB (+) di kanan bawah
-- Atau klik menu "Tambah" di bottom navigation
-- Isi form dan pilih kategori
-- Klik "Tambah Tugas"
-
-### 4. Kelola Tugas
-- Klik checkbox untuk menandai selesai
-- Klik card tugas untuk melihat detail
-- Edit atau hapus tugas dari halaman detail
-
-### 5. Lihat Statistik
-- Klik menu "Statistik" untuk melihat progress
-- Grafik pie menampilkan distribusi kategori
-- Grafik line menampilkan progress mingguan
-
-## 📱 Fitur PWA
-
-Aplikasi ini adalah Progressive Web App yang bisa:
-- Diinstall di home screen
-- Bekerja offline (dengan service worker)
-- Memberikan notifikasi push
-- Memiliki splash screen
+- **UI/UX**: Modern dan user-friendly
+- **Responsif**: Ukuran window disesuaikan untuk pengalaman mobile
 
 ## 💾 Penyimpanan Data
 
-Data disimpan menggunakan **localStorage** browser, sehingga:
-- ✅ Data tetap tersimpan setelah browser ditutup
-- ✅ Tidak perlu server atau database
+Data disimpan menggunakan **JSON file** lokal (`taskly_data.json`), sehingga:
+- ✅ Data tetap tersimpan setelah aplikasi ditutup
+- ✅ Tidak perlu server atau database eksternal
 - ✅ Privacy terjaga (data hanya di device Anda)
-- ⚠️ Data akan hilang jika cache browser dibersihkan
+- ✅ Mudah untuk backup dan restore
 
 ## 🎯 Kategori Tugas
 
@@ -112,104 +82,89 @@ Data disimpan menggunakan **localStorage** browser, sehingga:
 5. **Kerja** - Tugas pekerjaan
 6. **Olahraga** - Aktivitas olahraga
 
-## 🌐 Kompatibilitas
-
-### Browser yang Didukung
-- ✅ Chrome/Edge (Desktop & Mobile)
-- ✅ Firefox (Desktop & Mobile)
-- ✅ Safari (Desktop & Mobile)
-- ✅ Opera
-
-### Perangkat
-- ✅ Desktop/Laptop (Windows, Mac, Linux)
-- ✅ Tablet (iPad, Android Tablet)
-- ✅ Smartphone (iOS, Android)
-
-## 📂 Struktur File
+## 📁 Struktur Project
 
 ```
-taskly/
-├── index.html          # Halaman utama
-├── style.css           # Stylesheet
-├── app.js              # JavaScript logic
-├── manifest.json       # PWA manifest
-└── README.md          # Dokumentasi
+opencode/
+├── main.py              # File utama aplikasi
+├── requirements.txt     # Dependencies
+├── README.md           # Dokumentasi
+├── taskly_data.json    # Data storage (auto-generated)
+└── .gitignore          # Git ignore file
 ```
 
 ## 🔧 Teknologi
 
-- **HTML5** - Struktur aplikasi
-- **CSS3** - Styling & animations
-- **JavaScript (Vanilla)** - Logic & interactivity
-- **LocalStorage** - Data persistence
-- **Font Awesome** - Icons
-- **PWA** - Progressive Web App features
-
-## 🎨 Palet Warna
-
-```css
-Primary: #6C5CE7 (Purple)
-Secondary: #00D2D3 (Cyan)
-Success: #00B894 (Green)
-Warning: #FDCB6E (Yellow)
-Danger: #FF7675 (Red)
-Dark: #2D3436
-Gray: #636E72
-Light Gray: #DFE6E9
-Background: #F5F6FA
-White: #FFFFFF
-```
+- **Python** - Bahasa pemrograman
+- **Kivy** - Framework UI/UX untuk aplikasi multi-platform
+- **JSON** - Format penyimpanan data
 
 ## 🚀 Pengembangan Selanjutnya
 
 ### Fitur yang Akan Datang
-- [ ] Service Worker untuk offline support
-- [ ] Push notifications
-- [ ] Sync dengan cloud (Firebase/Supabase)
-- [ ] Kolaborasi tim
-- [ ] Reminder & alarm
+- [ ] Edit tugas yang sudah ada
+- [ ] Delete tugas individual
+- [ ] Filter tugas berdasarkan kategori
+- [ ] Pencarian tugas
+- [ ] Notifikasi pengingat
 - [ ] Dark mode
-- [ ] Multi-language support
 - [ ] Export/Import data
-- [ ] Recurring tasks
-- [ ] Subtasks
-- [ ] Attachments
+- [ ] Recurring tasks (tugas berulang)
 - [ ] Priority levels
-- [ ] Tags & labels
+- [ ] Kalender view
+
+## 📝 Catatan Pengembangan
+
+### Commit History
+Setiap penambahan fitur atau perubahan akan didokumentasikan dengan commit yang jelas:
+- `Initial commit` - Setup project awal
+- `Add feature: Tambah UI Beranda` - Menambahkan halaman beranda
+- `Add feature: Form tambah tugas` - Implementasi form tambah tugas
+- Dan seterusnya...
+
+## 👨‍💻 Developer
+
+**Nama**: Resa Fakra  
+**Kelas**: [Isi kelas Anda]  
+**Sekolah**: [Isi nama sekolah]
 
 ## 📝 Lisensi
 
 © 2026 Taskly. All rights reserved.
 
-## 👨‍💻 Developer
-
-Dibuat dengan ❤️ untuk mengelola tugas dengan lebih mudah dan efisien.
-
 ---
 
-## 🎯 Tips Penggunaan
+## 🎯 Cara Penggunaan
 
-1. **Gunakan Kategori**: Kategorikan tugas untuk analisis yang lebih baik
-2. **Set Deadline**: Selalu tambahkan tanggal dan waktu
-3. **Review Statistik**: Lihat progress mingguan Anda
-4. **Hapus Selesai**: Bersihkan tugas yang sudah selesai secara berkala
-5. **Backup Data**: Export data secara berkala (fitur segera hadir)
+### 1. Menambah Tugas
+- Klik tombol "➕ Tambah" di bottom navigation
+- Isi form dengan detail tugas
+- Pilih kategori yang sesuai
+- Klik "Tambah Tugas"
+
+### 2. Menandai Tugas Selesai
+- Di halaman beranda, klik checkbox di sebelah kiri tugas
+- Tugas akan ditandai sebagai selesai
+
+### 3. Melihat Statistik
+- Klik menu "📊 Statistik" di bottom navigation
+- Lihat ringkasan total tugas, selesai, berlanjut, dan persentase
+
+### 4. Profil & Pengaturan
+- Klik menu "👤 Profil" di bottom navigation
+- Akses pengaturan dan informasi aplikasi
 
 ## 🆘 Troubleshooting
 
-### Data Hilang?
-- Pastikan tidak membersihkan cache browser
-- Data disimpan di localStorage
-- Gunakan fitur backup (segera hadir)
+### Aplikasi tidak bisa dijalankan?
+- Pastikan Python 3.8+ sudah terinstall
+- Install ulang dependencies: `pip install -r requirements.txt`
+- Cek apakah ada error di terminal
 
-### Tidak Bisa Login?
-- Untuk demo, kredensial apa saja bisa digunakan
-- Pastikan JavaScript diaktifkan
-
-### Tampilan Tidak Responsif?
-- Clear cache browser
-- Refresh halaman (Ctrl+F5)
-- Gunakan browser modern
+### Data hilang?
+- Cek file `taskly_data.json` di folder project
+- Jangan hapus file tersebut
+- Backup file JSON secara berkala
 
 ---
 
